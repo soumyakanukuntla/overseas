@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosper Overseas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons CSS (This is Required) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        /* .hero {
+            background: url('https://via.placeholder.com/1600x800') ;
+            height: 80vh;
+            position: relative;
+        } */
+
+        /* .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        } */
+
+        /* .search-box {
+            background: #d1792d;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+
+        .search-box button {
+            background: #9e4f28;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+        } */
+
+        .text-muted {
+            width: 18%;
+            font-size: 13px;
+            line-height: 22px;
+            padding: 0 0 10px 2%;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 50px;
+            background-color: #e3e2e2f4;
+            margin: 0 10px;
+        }
+
+        .monogram {
+
+            width: 12%;
+            padding: 8px 0 0 0;
+        }
+
+        .monogram .mono {
+
+            width: 130px;
+            height: 90px;
+            background: url(images/image.png) 0 0;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            background-color: #ccc;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+
+        .google {
+            background-color: #db4437;
+        }
+
+        .social-icon:hover {
+            opacity: 0.8;
+        }
+
+        .job-src {
+            padding: 50px 0;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('https://example.com/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px 0;
+        }
+
+        .job-src-bx1 {
+            padding: 35px 0 35px;
+            margin-top: 60px;
+
+        }
+
+
+        .job-src-bx1 form div:first-child {
+            padding: 30px 20px;
+            display: inline-block;
+            transition: 0.5s;
+            background-color: #e8922b;
+            outline: 4px double #fff;
+            outline-offset: -11px;
+        }
+
+        .job-src-bx1 h2 {
+            font-weight: bold;
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-family: 'roboto';
+            font-style: normal;
+            font-weight: normal;
+
+        }
+
+
+        h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .job-clk1 input[type="text"] {
+            width: auto;
+            min-width: 200px;
+        }
+
+        .job-src-bx1 input.submit-btn,
+        #btnenquiry {
+            background: #d22811;
+            transition: 0.5s;
+            padding: 7px 17px;
+            border-radius: 5px;
+            color: white;
+            border: 1px solid white;
+            margin-top: 10px;
+        }
+
+        .inputbox {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: transparent;
+            color: black;
+
+        }
+
+        .job-src-bx1 form div {
+            text-align: center;
+        }
+
+        .job-src-bx1 form div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .bi {
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+
+
+
+        .content {
+            /* padding: 40px 0; */
+            width: 100%;
+            background-color: #633994;
+            ;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            text-align: justify;
+        }
+
+        .content form {
+            /* background-color: #f8f9fa;  */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            background-color: #581845;
+            border-color: #581845;
+        }
+
+        .btn-primary:hover {
+            background-color: #431332;
+            border-color: #431332;
+        }
+
+        .nav-item {
+            border: 1px solid rgb(57, 52, 52);
+
+        }
+
+        .nav-item:hover {
+            background-color: red;
+        }
+
+        .bannarpic {
+            background-image: url('http://www.prosperoverseas.com/images/web4.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .stats-container {
+            background-color: rgb(234, 232, 232);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .stat-item {
+            text-align: center;
+            margin-bottom: 30px; 
+        }
+
+        .stat-icon i{
+            font-size: 38px; 
+            /* color: #007bff;  */
+            margin-bottom: 10px;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ed7307;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #070808; 
+        }
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .carousel-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 95%;
+        }
+        .carousel-track {
+            display: flex;
+        }
+        .carousel-item {
+            min-width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+        .carousel-btn {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            padding: 5px 10px;
+            /* top: 50%; */
+          
+        }
+        .heading {
+            text-align: center;
+            padding-block: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+        .text {
+            color: #ed7307;
+        }
+        .logo-container {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            background: white;
+            max-width: 120%;
+          /* margin-bottom: 20px; */
+        }
+        .title {
+            color: #ed7307;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .logo-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+           
+          
+
+        }
+        .logo-item {
+            width: 150px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .logo-item:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="http://www.prosperoverseas.com/Content/images/logo.png"
+                    alt="Logo"></a>
+            <div class="vertical-line"></div>
+            <span class="text-muted">Meet India’s Leading Overseas Career Company</span>
+            <div class="monogram" title="Excellence Services">
+                <div class="mono" title="Excellence Services">
+                </div>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <a href="https://www.facebook.com/prosperoverseas" class="social-icon facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/myprosper" class="social-icon twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="http://in.linkedin.com/pub/dir/Prosper/Overseas" class="social-icon linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://plus.google.com/u/0/106017753141172563302" class="social-icon google"
+                    title="Google Plus">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 ">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Countries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">For Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">For Universities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Online Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Immigration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Associate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Franchise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </nav>
+    </div>
+    </nav>
+
+
+
+
+
+    <div class="bannarpic">
+        <div class="row ">
+            <div class="col-md-4   mx-auto firstcontainer">
+                <div class="job-src-bx1">
+                    <form name="form1" autocomplete="off">
+                        <div>
+                            <h2 id="title-frm">Start Your Career Search</h2>
+
+                            <div class="flex flex-row align-items-center gap-2 px-4">
+                                <label style="font-size: 20px;">I am interested in</label>
+                                <span class="job-clk1">
+                                    <input type="text" class="inputbox" id="fname" name="fname">
+                                </span>
+                            </div>
+                            <div class="flex flex-row align-items-center gap-4 px-4">
+                                <label style="font-size: 20px;"> services in</label>
+                                <span class="job-clk2">
+                                    <input type="text" class="inputbox" id="fname" name="fname">
+                                </span>
+                            </div>
+                            <input type="button" class="submit-btn" value="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="content p-5" style="margin-top: 12%; color: white;">
+                    <div class="d-flex justify-content-between align-items-center  text-white w-100">
+                        <div>
+                            <h3 style="margin-left: 80px;">Overseas Education Consultants</h3>
+                        </div>
+                        <div>
+                            <h3 style="margin-right: 200px;">Search for Course</h3>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col-md-6 mt-3">
+                            <div class="d-flex align-items-start gap-4">
+                                <div>
+                                    <img src="http://www.prosperoverseas.com/Content/images/front.png"
+                                        alt="Prosper Overseas Logo" class="img-fluid"
+                                        style="height: 183px; border-radius: 50%;">
+                                </div>
+                                <div style="width: 95%;">
+                                    <p>Prosper Overseas is the <span class="text-danger fw-bold">best
+                                            Overseas Career Consultants in India</span>, we have 12 branches across
+                                        India. A
+                                        flagship of Prosper Education Pvt Ltd, Prosper Overseas in India is a well-known
+                                        overseas education consultant. Authorized Representative for more than 500 plus
+                                        renowned
+                                        institutions across the globe. Prosper Overseas is the trusted name in India &
+                                        is well
+                                        Recognized & Accredited by various High Commission & Visa Consulates.</p>
+                                </div>
+
+                                <div class="vr" style=" height: 200px; margin-left: 20px;"></div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-md-5">
+                            <form style="margin-left: 200px;">
+                                <div class="form-group m-3">
+                                    <select class="form-control " id="country">
+                                        <option value="">-Select Country-</option>
+                                    </select>
+                                </div>
+                                <div class="form-group m-3">
+                                    <select class="form-control" id="studyLevel">
+                                        <option value="">-Select Study Level-</option>
+                                    </select>
+                                </div>
+                                <div class="form-group m-3">
+                                    <input type="text" class="form-control" placeholder="Type only program name"
+                                        id="programName">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-danger border-1 border-white">Submit</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+     
+
+<div class="new mt-4 px-5" style="width: 100%;">
+    <div class="text-center">
+        <h3>Free Profile Evaluation</h3>
+    </div>
+    <div class="d-flex align-items-start gap-4 p-5">
+        <!-- Image Section -->
+        <div class="d-flex align-items-start">
+            <img src="http://www.prosperoverseas.com/Content/images/profile-evaluation1.jpg" 
+                alt="Profile Evaluation Image"
+                style="height:250px; width: 150px;">
+        </div>
+        <!-- Text Section -->
+        <div style="width: 85%; text-align: justify;">
+            <p>
+                Universities as per your profile. This tool evaluates your profile and gives you a shortlist of
+                universities by selecting that profile from the database which exactly or closely matches your
+                profile. This tool evaluates your profile and gives you a shortlist of universities by selecting that
+                profile from the database which exactly or closely matches your profile. This tool evaluates your
+                profile and gives you a shortlist of universities by selecting that profile from the database which
+                exactly or closely matches your profile.
+            </p>
+            <p>
+                This tool evaluates your profile and gives you a shortlist of universities by selecting that profile
+                from the database which exactly or closely matches your profile. This tool evaluates your profile and
+                gives you a shortlist of universities by selecting that profile from the database which exactly or
+                closely matches your profile. This tool evaluates your profile and gives you a shortlist of
+                universities by selecting that profile from the database which exactly or closely matches your
+                profile.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Fix: Floating Text -->
+    <div class="text-end" >
+        <span class="text-danger fw-bold me-lg-5">Click Here To Evaluate...</span>
+    </div>
+
+    <div>
+        <h3 class="ms-5">Upcoming Events</h3>
+    </div>
+</div>
+
+
+
+<div class="stats-container">
+    <div class="row d-flex flex-wrap justify-content-between px-5">
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-bank"  ></i>
+            </div>
+            <div class="stat-number">3000+</div>
+            <div class="stat-label">Universities Processed</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-menu-button-wide"></i>
+            </div>
+            <div class="stat-number">100000</div>
+            <div class="stat-label">Programs Available</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-flag-fill"></i>
+            </div>
+            <div class="stat-number">21</div>
+            <div class="stat-label">Countries Represented</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div class="stat-number">75000+</div>
+            <div class="stat-label">Students Counseled</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-person-vcard-fill"></i>
+            </div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">VISA Success Rate</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="stat-number">90%</div>
+            <div class="stat-label">Students Referred</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-1 stat-item">
+            <div class="stat-icon">
+                <i class="bi bi-currency-dollar"></i>
+            </div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Bank Loan Available</div>
+        </div>
+    </div>
+
+  
+
+</div>
+
+
+<div class="my-4">
+    <div class="stats-container">
+        <p class="heading" >Having Problems With Your <span class="text" >Study Visa ?</span> 7 Easy Steps <span class="text">Get Visa</span></p>
+        <div class="row d-flex flex-wrap justify-content-between px-5 align-items-start">
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/log1.png" alt="">
+                </div>
+                <div class="stat-label fw-bold">Free</div>
+                <div class="stat-label">Counseling</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/log2.png" alt="">
+                </div>
+                <div class="stat-label fw-bold mt-3">Submit</div>
+                <div class="stat-label">Documents</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo3.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Accept</div>
+                <div class="stat-label">Admission</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo4.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Free</div>
+                <div class="stat-label">Submission</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo5.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Visa</div>
+                <div class="stat-label">Documentation</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo6.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Interview</div>
+                <div class="stat-label">Training</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo7.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Get</div>
+                <div class="stat-label">VISA</div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-1 text-center stat-item">
+                <div class="stat-icon">
+                    <img src="/images/logo8.png" alt="">
+                </div>
+                <div class="stat-label fw-bold  mt-3">Fly</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center my-4">
+    <h2>University Testimonials</h2>
+</div>
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <div class="carousel-track border border-1 p-3 mb-5">
+           
+            <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7xmf5DQeAp0"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+         
+        </div>
+    </div>
+</div>
+
+
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <div class="carousel-track border border-1 p-3 mb-5">
+           
+            <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7xmf5DQeAp0"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+              <div class="embed-responsive embed-responsive-21by9 mx-3 border border-1 p-1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f2T2-h-1oJs?start=862"></iframe>
+                <p>MBBS Universities in UK - If you’re looking for pursuing</p>
+
+              </div>
+         
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="logo-container text-center my-5">
+        <h5 class="title">Few Representations</h5>
+        <div class="logo-grid">
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni01.gif" alt="Logo 1"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni02.gif" alt="Logo 2"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni04.gif" alt="Logo 3"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni05.gif" alt="Logo 4"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni06.gif" alt="Logo 5"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni07.gif" alt="Logo 6"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni08.gif" alt="Logo 7"></div>
+            <div class="logo-item"><img src="https://www.prosperoverseas.com/Content/images/uni_log/uni09.gif" alt="Logo 8"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer class="bg-dark text-light py-10 mt-12">
+    <div class="container">
+        <div class="row d-flex flex-wrap justify-content-between p-4 ">
+            <div class="col-md-auto px-5">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Mission & Objectives</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">About Prosper</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Overseas</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">CMD Message</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Prosper Governance</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Policy</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Corporate Responsibility</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Social Initiatives</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-auto px-5">
+                <h5>Country Websites</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">USA</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Canada</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Australia</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">UK</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Ireland</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">New Zealand</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Singapore</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">France</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Switzerland</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-auto px-5">
+                <h5>Online</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Registration</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Feedback</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Student Login</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-auto px-5">
+                <h5>News & Events</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Registration</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Feedback</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Student Login</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-auto px-5">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Registration</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Feedback</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Student Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
